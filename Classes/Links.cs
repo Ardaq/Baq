@@ -61,7 +61,7 @@ namespace Baq_Sozdik.Classes
                 string database =
                     //AppDomain.CurrentDomain.BaseDirectory + "..\\..\\Databases\\sozdikDB";
                     AppDomain.CurrentDomain.BaseDirectory + "\\Data\\Sozdik";
-                string connectionString = @"Data Source=" + Path.GetFullPath(database) + ";Password=ASdfg436345lhdjsdhf45646ldfg";
+                string connectionString = @"Data Source=" + Path.GetFullPath(database) + ";Password=";
                 return connectionString;
             }
         }
