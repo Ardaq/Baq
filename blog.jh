@@ -1,0 +1,28 @@
+
+entity User
+entity Entry {
+  name String required
+  connet String required maxlength(100)
+  date Instant required 
+}
+
+entity Blog {
+  name String required
+
+}
+entity Tag{
+ name String required minlength(2)
+
+}
+relationship ManyToOne {
+  Entry to Blog
+  
+}
+
+relationship ManyToMany {
+  Entry{book} to Tag{writer(name) required}
+}
+relationship ManyToOne {
+Blog  to User
+}
+paginate Entry,Tag with infinite-scroll
